@@ -26,9 +26,9 @@ nonstandartString = 'lETS SAY I FORGET TO CLOSE MY CAPS LOCK AND MY NAME IS oMER
 
 
 string-contains(nonstandartString,'omer')
-
+# expected to return false since capitilazation does not match
 string-contains(string-to-lower(nonstandartString),'omer')
-
+# expected to return true
 circle(30, "solid", "green")
 
 rectangle(80,40,"solid", "red")
