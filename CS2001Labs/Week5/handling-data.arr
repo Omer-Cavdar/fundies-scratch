@@ -5,7 +5,7 @@ flights_53 = load-table:
   rownames,dep_time,sched_dep_time,dep_delay,arr_time,sched_arr_time,arr_delay,carrier,flight,tailnum,origin,dest,air_time,distance,hour,minute,time_hour
   source: csv-table-file("flights_sample53.csv", default-options)
   sanitize rownames using num-sanitizer
-  sanitize dep_time using num-sanitizer
+  sanitize dep_time using num-sanitizers
   sanitize sched_dep_time using num-sanitizer  
   sanitize dep_delay using num-sanitizer
   sanitize arr_time using num-sanitizer
@@ -52,6 +52,7 @@ fun trim(s :: String) -> String:
     string-replace(s, " ", "")
   end
 end
+
 fun hour-converter(n :: Number) -> String:
   doc:"changes the minutes given to HH:MM format"
   hour = n/60
